@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Pregunta</h1>
+    <ul id="opcion">
+
+    </ul>
+
+    <script>
+        var preguntas_respuestas = new Map(); //creo un mapa que contendra las preguntas y respuestas
+        preguntas_respuestas.set("Que es la Herencia?","a");
+        preguntas_respuestas.set("¿Que es la Encapsulacion?","b");
+        preguntas_respuestas.set("Que son las Clases Abstractas?","c")//agrego contenido al mapa
+
+        preguntas_respuestas.forEach((valor,clave) => {
+            var opcion = document.getElementById("opcion");
+            console.log(opcion);
+            var li = document.createElement("li");
+            li.textContent=clave;
+            opcion.appendChild(li);
+            console.log(opcion);
+            document.write(clave+'\n') ;
+            document.write(valor) ;
+        });
+
+        //console.log(preguntas_respuestas);
+    </script>
+</body>
+</html>
